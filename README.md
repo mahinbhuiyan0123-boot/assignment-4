@@ -126,16 +126,6 @@ stopPropagation() = Stops event from bubbling to parent.
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Functionalities Part
 - Clicking on Interview button on the card 
     - will add the data on Interview tab 
