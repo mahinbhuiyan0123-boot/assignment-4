@@ -231,7 +231,7 @@ function renderReject() {
                     interview
                 </button>
 
-                <button class="ignore text-red-500 border border-red-500 rounded py-2 px-3">
+                <button class="ignore  text-red-500 border border-red-500 rounded py-2 px-3">
                     Rejected
                 </button>
             </div>
