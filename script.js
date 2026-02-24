@@ -44,6 +44,7 @@ function togglebtn(id) {
     currentstatus = id;
     selected.classList.remove('bg-white')
     selected.classList.add('bg-sky-500', 'text-white')
+    counting()
     if (id == 'interview-btn') {
         childcount.classList.add('hidden');
         rejectonly.classList.add('hidden');
@@ -92,6 +93,8 @@ main.addEventListener('click', function (event) {
             interviewlist.push(cardinfo);
         }
         rejectlist = rejectlist.filter(item => item.company !== cardinfo.company)
+
+        // for counting again
         if (currentstatus == "reject-btn") {
 
             renderReject()
@@ -136,9 +139,7 @@ main.addEventListener('click', function (event) {
     }
 
 });
-function showintOnly() {
-    interviewonly.classList.remove('hidden');
-}
+
 function renderInterview() {
     interviewonly.innerHTML = '';
     if (interviewlist.length === 0) {
@@ -149,7 +150,7 @@ function renderInterview() {
                 <p class="text-gray-500">Check back soon for new job opportunities</p>
             </div>
         `;
-        showintOnly();
+
         return;
     }
     for (let item of interviewlist) {
@@ -180,7 +181,7 @@ function renderInterview() {
                     interview
                 </button>
 
-                <button class="ignore text-red-200 border border-red-500 rounded py-2 px-3">
+                <button class="ignore text-red-500 border border-red-500 rounded py-2 px-3">
                     Rejected
                 </button>
             </div>
