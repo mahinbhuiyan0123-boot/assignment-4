@@ -68,6 +68,7 @@ function togglebtn(id) {
 
 }
 
+
 // mainsection main main main
 const main = document.querySelector("#alpha");
 main.addEventListener('click', function (event) {
